@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import axios from 'axios'
 import * as serviceWorker from './serviceWorker';
+
+axios.interceptors.request.use(config=>{
+    return config;
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
